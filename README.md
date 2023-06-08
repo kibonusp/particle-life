@@ -1,18 +1,12 @@
 # particle-life
 
-A Quil sketch designed to ... well, that part is up to you.
+## About
+An implementation of [Tom Mor's Particle Life](https://youtu.be/p4YirERTVF0) in Clojure. It was made using Quil and based on the [attraction repo](https://github.com/kibonusp/attraction) and the [Noite de Processing's video](https://www.youtube.com/live/_AgE_akJWuk?feature=share) from Garoa Hacker Clube.
+
+![Example](images/example.png)
 
 ## Usage
 
-LightTable - open `core.clj` and press `Ctrl+Shift+Enter` to evaluate the file.
+Run `lein run` on the terminal with [Leiningen](https://leiningen.org/) installed.
 
-Emacs - run cider, open `core.clj` and press `C-c C-k` to evaluate the file.
-
-REPL - run `(require 'particle-life.core)`.
-
-## License
-
-Copyright © 2016 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+If you have Java installed, you can also run the standalone with `java -jar target/particle-life-0.1.0-SNAPSHOT-standalone.jar`.

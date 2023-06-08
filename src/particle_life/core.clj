@@ -10,7 +10,7 @@
   (reduce (fn [vec _] (conj vec (dec (rand 2)))) [] (range quant)))
 
 (def configuration 
-  (let [n-colors 4]
+  (let [n-colors 3]
     {:n-colors n-colors
      :quantity (reduce into (repeat n-colors [200]))
      :colors (reduce #(conj %1 (int (Math/floor (* %2 (/ 256 n-colors))))) [] (range n-colors)) 
