@@ -9,4 +9,4 @@ An implementation of [Tom Mor's Particle Life](https://youtu.be/p4YirERTVF0) in 
 
 Run `lein run` on the terminal with [Leiningen](https://leiningen.org/) installed.
 
-If you have Java installed, you can also run the standalone with `java -jar target/particle-life-0.1.0-SNAPSHOT-standalone.jar`.
+If you have Java installed, you can also run the standalone with `java -jar target/particle-life-0.1.0-SNAPSHOT-standalone.jar`.git

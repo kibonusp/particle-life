@@ -12,7 +12,7 @@
 (def configuration 
   (let [n-colors 3]
     {:n-colors n-colors
-     :quantity (reduce into (repeat n-colors [200]))
+     :quantity (reduce into (repeat n-colors [60]))
      :colors (reduce #(conj %1 (int (Math/floor (* %2 (/ 256 n-colors))))) [] (range n-colors)) 
      :attraction-matrix (reduce (fn [vec _] (conj vec (create-quant-random n-colors))) [] (range n-colors))}
     )
@@ -39,7 +39,7 @@
      (assoc particle :acc (sumVectors new-acc (:acc particle)))))
 
 (defn update-particle [particle attractors]
-  ((comp tick updateParticle #(reduce accumulate-force % attractors)) particle))
+  ((comp updateParticle #(reduce accumulate-force % attractors) tick) particle))
 
 (defn update-state [state]
   {:particles (let [particles (:particles state)]
@@ -52,13 +52,13 @@
      ))})
 
 (defn draw-state [state]
-  (q/background 255 0 255)
+  (q/background 255 0 0)
   (let [particles (:particles state)]
     (doseq [particle particles] (show particle))))
 
 (defn -main []
   (q/sketch :title "Particle Life" 
-            :size [400 400]
+            :size [300 300]
             :setup setup 
             :update update-state
             :draw draw-state
