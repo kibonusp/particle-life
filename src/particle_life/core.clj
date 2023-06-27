@@ -12,7 +12,7 @@
 (def configuration 
   (let [n-colors 3]
     {:n-colors n-colors
-     :quantity (reduce into (repeat n-colors [60]))
+     :quantity (reduce into (repeat n-colors [70]))
      :colors (reduce #(conj %1 (int (Math/floor (* %2 (/ 256 n-colors))))) [] (range n-colors)) 
      :attraction-matrix (reduce (fn [vec _] (conj vec (create-quant-random n-colors))) [] (range n-colors))}
     )
@@ -25,7 +25,7 @@
                   {:index type :color (get (:colors configuration) type)}))
 
 (defn setup []
-  (q/frame-rate 120)
+  (q/frame-rate 60)
   (q/color-mode :hsb)
   {:particles (reduce #(into %1 (for [_ (range (get (:quantity configuration) %2))] (createRandomParticle %2))) 
                       '() 
@@ -58,7 +58,7 @@
 
 (defn -main []
   (q/sketch :title "Particle Life" 
-            :size [300 300]
+            :size [400 400]
             :setup setup 
             :update update-state
             :draw draw-state

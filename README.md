@@ -5,6 +5,12 @@ An implementation of [Tom Mor's Particle Life](https://youtu.be/p4YirERTVF0) in 
 
 ![Example](images/example.png)
 
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true">
+    <source src="images/video.mp4" type="video/mp4">
+  </video>
+</figure>
+
 ## Usage
 
 Run `lein run` on the terminal with [Leiningen](https://leiningen.org/) installed.
